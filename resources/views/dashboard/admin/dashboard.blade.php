@@ -6,32 +6,31 @@
 
 @section('content')
 
-<main class="min-h-screen bg-gradient-to-br from-blue-500 via-blue-900 to-black p-10">
-    <div class="max-w-6xl mx-auto bg-white bg-opacity-10 backdrop-blur-md shadow-2xl border border-gray-700 rounded-3xl p-10 text-white">
+<main class="min-h-screen bg-gradient-to-br from-pink-500 via-red-600 to-pink-800 p-10">
+    <div class="max-w-6xl mx-auto bg-white bg-opacity-15 backdrop-blur-md shadow-2xl border border-gray-700 rounded-3xl p-10 text-white">
 
         {{-- Header Dashboard --}}
-        <h1 class="text-5xl font-extrabold text-center mb-8 neon-text">
-          
-             Dashboard Admin
+        <h1 class="text-5xl font-extrabold text-center mb-8 neon-text text-pink-400">
+            Dashboard Admin
         </h1>
 
         {{-- Navigation Buttons --}}
         <div class="flex justify-center gap-6 mb-8">
             <a href="{{ route('book.index') }}" 
-                class="px-8 py-3 bg-blue-600 text-white font-semibold rounded-full shadow-lg hover:bg-blue-500 transition transform hover:scale-105 glow-effect">
+                class="px-8 py-3 bg-pink-600 text-white font-semibold rounded-full shadow-xl hover:bg-pink-500 transition transform hover:scale-110 focus:ring-4 focus:ring-pink-300 glow-effect">
                 📚 Book List
             </a>
             <a href="{{ route('dashboard.borrow-list') }}" 
-                class="px-8 py-3 bg-green-600 text-white font-semibold rounded-full shadow-lg hover:bg-green-500 transition transform hover:scale-105 glow-effect">
+                class="px-8 py-3 bg-red-600 text-white font-semibold rounded-full shadow-xl hover:bg-red-500 transition transform hover:scale-110 focus:ring-4 focus:ring-red-300 glow-effect">
                 📖 Borrow List
             </a>
         </div>
 
         {{-- Table Section --}}
-        <div class="overflow-x-auto bg-black bg-opacity-20 backdrop-blur-lg rounded-xl border border-gray-700 shadow-md">
+        <div class="overflow-x-auto bg-black bg-opacity-30 backdrop-blur-lg rounded-xl border border-gray-700 shadow-md">
             <table class="min-w-full border-collapse w-full text-white">
                 <thead>
-                    <tr class="bg-gradient-to-r from-blue-700 to-gray-700 text-white">
+                    <tr class="bg-gradient-to-r from-pink-700 to-red-700 text-white">
                         <th class="px-6 py-4 text-left">No</th>
                         <th class="px-6 py-4 text-left">Name</th>
                         <th class="px-6 py-4 text-left">Book Title</th>
@@ -47,19 +46,19 @@
                     @endif
 
                     @foreach ($pendingBorrows as $pending)
-                        <tr class="border-b border-gray-600 hover:bg-gray-800 transition">
+                        <tr class="border-b border-gray-600 hover:bg-gray-800 transition duration-300 ease-in-out">
                             <td class="px-6 py-4">{{ $loop->index + 1 }}</td>
                             <td class="px-6 py-4">{{ $pending->user->name }}</td>
                             <td class="px-6 py-4">{{ $pending->book->title }}</td>
                             <td class="px-6 py-4">{{ $pending->created_at->format('l, j F Y H:i') }}</td>
-                            <td class="px-6 py-4 flex justify-center gap-4">
+                            <td class="px-6 py-4 flex justify-center gap-6">
                                 {{-- Accept Button --}}
                                 <form action="{{ route('borrow.accept') }}" method="POST">
                                     @csrf
                                     @method('PATCH')
                                     <input type="hidden" name="id" value="{{ $pending->id }}">
                                     <button type="submit"
-                                        class="px-4 py-2 bg-green-500 text-white font-semibold rounded-lg shadow-md hover:bg-green-400 transition transform hover:scale-105 glow-effect">
+                                        class="px-6 py-2 bg-red-500 text-white font-semibold rounded-lg shadow-md hover:bg-red-400 transition transform hover:scale-105 focus:ring-4 focus:ring-red-300 glow-effect">
                                         ✅ Accept
                                     </button>
                                 </form>
@@ -70,7 +69,7 @@
                                     @method('PATCH')
                                     <input type="hidden" name="id" value="{{ $pending->id }}">
                                     <button type="submit"
-                                        class="px-4 py-2 bg-red-500 text-white font-semibold rounded-lg shadow-md hover:bg-red-400 transition transform hover:scale-105 glow-effect">
+                                        class="px-6 py-2 bg-pink-500 text-white font-semibold rounded-lg shadow-md hover:bg-pink-400 transition transform hover:scale-105 focus:ring-4 focus:ring-pink-300 glow-effect">
                                         ❌ Decline
                                     </button>
                                 </form>
@@ -97,11 +96,11 @@
         position: "right",
         stopOnFocus: true,
         style: {
-            background: "linear-gradient(to right, #22c55e, #16a34a)",
+            background: "linear-gradient(to right, #f472b6, #ec4899)",
             color: "#fff",
             borderRadius: "10px",
             padding: "12px",
-            boxShadow: "0px 0px 15px rgba(34, 197, 94, 0.7)",
+            boxShadow: "0px 0px 15px rgba(244, 114, 182, 0.7)",
         },
         onClick: function() {}
     }).showToast();

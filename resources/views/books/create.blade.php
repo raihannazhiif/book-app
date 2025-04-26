@@ -5,11 +5,11 @@
 @endsection
 
 @section('content')
-<section class="p-8 min-h-screen flex justify-center items-center bg-blue-900 text-white">
+<section class="p-8 min-h-screen flex justify-center items-center bg-pink-900 text-white">
     <div class="max-w-3xl w-full bg-gray-700 bg-opacity-40 backdrop-blur-lg p-6 rounded-xl shadow-lg">
         
         {{-- Header --}}
-        <h1 class="text-3xl font-bold text-center text-blue-400 mb-6">📚 Add New Book</h1>
+        <h1 class="text-3xl font-bold text-center text-pink-400 mb-6">📚 Add New Book</h1>
 
         {{-- Error Messages --}}
         @if ($errors->any())
@@ -29,42 +29,42 @@
 
             {{-- Title --}}
             <div>
-                <label for="title" class="font-bold text-blue-300">Title</label>
-                <input type="text" name="title" id="title" class="w-full p-3 mt-1 bg-gray-700 text-white border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none shadow-md">
+                <label for="title" class="font-bold text-pink-300">Title</label>
+                <input type="text" name="title" id="title" class="w-full p-3 mt-1 bg-gray-700 text-white border border-gray-600 rounded-lg focus:ring-2 focus:ring-pink-500 focus:outline-none shadow-md">
             </div>
 
             {{-- Description --}}
             <div>
-                <label for="description" class="font-bold text-blue-300">Description</label>
-                <textarea name="description" id="description" class="w-full p-3 mt-1 bg-gray-700 text-white border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none shadow-md"></textarea>
+                <label for="description" class="font-bold text-pink-300">Description</label>
+                <textarea name="description" id="description" class="w-full p-3 mt-1 bg-gray-700 text-white border border-gray-600 rounded-lg focus:ring-2 focus:ring-pink-500 focus:outline-none shadow-md"></textarea>
             </div>
 
             {{-- Pages --}}
             <div>
-                <label for="page_count" class="font-bold text-blue-300">Pages</label>
-                <input type="number" name="page_count" id="page_count" class="w-full p-3 mt-1 bg-gray-700 text-white border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none shadow-md">
+                <label for="page_count" class="font-bold text-pink-300">Pages</label>
+                <input type="number" name="page_count" id="page_count" class="w-full p-3 mt-1 bg-gray-700 text-white border border-gray-600 rounded-lg focus:ring-2 focus:ring-pink-500 focus:outline-none shadow-md">
             </div>
 
             {{-- Author --}}
             <div>
-                <label for="author" class="font-bold text-blue-300">Author</label>
-                <input type="text" name="author" id="author" class="w-full p-3 mt-1 bg-gray-700 text-white border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none shadow-md">
+                <label for="author" class="font-bold text-pink-300">Author</label>
+                <input type="text" name="author" id="author" class="w-full p-3 mt-1 bg-gray-700 text-white border border-gray-600 rounded-lg focus:ring-2 focus:ring-pink-500 focus:outline-none shadow-md">
             </div>
 
             {{-- Year --}}
             <div>
-                <label for="published_year" class="font-bold text-blue-300">Year</label>
-                <input type="number" name="published_year" id="published_year" class="w-full p-3 mt-1 bg-gray-700 text-white border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none shadow-md">
+                <label for="published_year" class="font-bold text-pink-300">Year</label>
+                <input type="number" name="published_year" id="published_year" class="w-full p-3 mt-1 bg-gray-700 text-white border border-gray-600 rounded-lg focus:ring-2 focus:ring-pink-500 focus:outline-none shadow-md">
             </div>
 
             {{-- Image Upload --}}
             <div>
-                <label for="image" class="font-bold text-blue-300">Image</label>
-                <input type="file" accept="image/*" name="image" id="image" class="w-full p-3 mt-1 bg-gray-700 text-white border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none shadow-md">
+                <label for="image" class="font-bold text-pink-300">Image</label>
+                <input type="file" accept="image/*" name="image" id="image" class="w-full p-3 mt-1 bg-gray-700 text-white border border-gray-600 rounded-lg focus:ring-2 focus:ring-pink-500 focus:outline-none shadow-md">
             </div>
 
             {{-- Submit Button --}}
-            <button type="submit" class="w-full p-4 bg-blue-600 text-white font-medium rounded-lg shadow-lg hover:bg-blue-500 transition transform hover:scale-105">
+            <button type="submit" class="w-full p-4 bg-pink-600 text-white font-medium rounded-lg shadow-lg hover:bg-pink-500 transition transform hover:scale-105">
                 ➕ Add Book
             </button>
         </form>

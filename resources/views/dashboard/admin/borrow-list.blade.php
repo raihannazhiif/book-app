@@ -4,7 +4,7 @@ Borrow List
 @endsection
 
 @section('content')
-<main class="flex flex-col gap-6 p-6 min-h-screen bg-gradient-to-br from-blue-500 via-blue-900 to-black text-white">
+<main class="flex flex-col gap-6 p-6 min-h-screen bg-gradient-to-br from-pink-500 via-red-600 to-pink-800 text-white">
     <h1 class="text-4xl font-extrabold text-center text-cyan-400 drop-shadow-lg animate-pulse">
         📚 Borrow List - Admin Dashboard
     </h1>
@@ -13,7 +13,7 @@ Borrow List
     <div class="overflow-x-auto bg-white bg-opacity-10 backdrop-blur-lg p-6 rounded-xl shadow-2xl border border-gray-700">
         <table class="w-full text-center border-collapse rounded-lg overflow-hidden">
             <thead>
-                <tr class="bg-gradient-to-r from-blue-500 to-blue-900 text-white text-lg">
+                <tr class="bg-gradient-to-r from-pink-600 to-red-700 text-white text-lg">
                     <th class="p-4">No</th>
                     <th class="p-4">Name</th>
                     <th class="p-4">Book Title</th>
@@ -92,9 +92,9 @@ Borrow List
         gravity: "top",
         position: "right",
         style: {
-            background: "linear-gradient(to right, #00c9ff, #92fe9d)",
+            background: "linear-gradient(to right, #ff416c, #ff4b2b)",
             borderRadius: "10px",
-            boxShadow: "0 0 10px #00c9ff",
+            boxShadow: "0 0 10px #ff416c",
         },
     }).showToast();
 </script>
@@ -109,9 +109,9 @@ Borrow List
         gravity: "top",
         position: "right",
         style: {
-            background: "linear-gradient(to right, #ff416c, #ff4b2b)",
+            background: "linear-gradient(to right, #ef4444, #dc2626)",
             borderRadius: "10px",
-            boxShadow: "0 0 10px #ff416c",
+            boxShadow: "0 0 10px #ef4444",
         },
     }).showToast();
 </script>
